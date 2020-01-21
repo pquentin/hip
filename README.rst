@@ -1,4 +1,4 @@
-hip
+Hip
 ===
 
 .. image:: https://travis-ci.org/python-trio/hip.svg?branch=master
@@ -24,9 +24,9 @@ hip
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 
-hip is a new Python HTTP client for everybody. It supports synchronous Python (just like requests does), but also Trio, asyncio and Curio.
+Hip is a new Python HTTP client for everybody. It supports synchronous Python (just like requests does), but also Trio, asyncio and Curio.
 
-hip is robust as it is based on urllib3 and uses its extensive test suite that was refined over the years. It also shares most urllib3 features:
+Hip is robust as it is based on urllib3 and uses its extensive test suite that was refined over the years. It also shares most urllib3 features:
 
 - Thread safety.
 - Connection pooling.
@@ -42,7 +42,7 @@ However, we currently do not support SOCKS proxies nor the pyOpenSSL and SecureT
 Sample code
 -----------
 
-hip is powerful and easy to use::
+Hip is powerful and easy to use::
 
     >>> import hip
     >>> http = hip.PoolManager()
@@ -68,7 +68,7 @@ It also supports async/await::
 Installing
 ----------
 
-hip can be installed with `pip <https://pip.pypa.io>`_::
+Hip can be installed with `pip <https://pip.pypa.io>`_::
 
     $ pip install hip
 
@@ -81,12 +81,12 @@ Alternatively, you can grab the latest source code from `GitHub <https://github.
 Documentation
 -------------
 
-hip will soon have usage and reference documentation at `hip.readthedocs.io <https://hip.readthedocs.io/en/latest/>`_.
+Hip will soon have usage and reference documentation at `hip.readthedocs.io <https://hip.readthedocs.io/en/latest/>`_.
 
 
 Contributing
 ------------
 
-hip happily accepts contributions. Please see our
+Hip happily accepts contributions. Please see our
 `contributing documentation <https://hip.readthedocs.io/en/latest/contributing.html>`_
 for some tips on getting started.
