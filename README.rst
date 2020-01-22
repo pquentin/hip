@@ -9,7 +9,7 @@ Hip
         :alt: Build status on GitHub Actions
         :target: https://github.com/python-trio/hip/actions
 
-.. image:: https://img.shields.io/codecov/c/github/python-trio/hip.svg
+.. image:: https://codecov.io/gh/python-trio/hip/branch/master/graph/badge.svg
         :alt: Coverage Status
         :target: https://codecov.io/gh/python-trio/hip
 
