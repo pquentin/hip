@@ -26,6 +26,8 @@ Hip
 
 Hip is a new Python HTTP client for everybody. It supports synchronous Python (just like requests does), but also Trio, asyncio and Curio.
 
+.. important:: Hip is still in its early days, use at your own risk! In particular, the async support is still experimental and untested.
+
 Hip is robust as it is based on urllib3 and uses its extensive test suite that was refined over the years. It also shares most urllib3 features:
 
 - Thread safety.
