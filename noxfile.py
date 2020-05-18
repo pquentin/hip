@@ -12,6 +12,7 @@ def _clean_coverage(coverage_path):
     for class_ in input_xml.findall(".//class"):
         filename = class_.get("filename")
         filename = re.sub("_sync", "_async", filename)
+        filename = re.sub("hip", "ahip", filename)
         class_.set("filename", filename)
     input_xml.write(coverage_path, xml_declaration=True)
 
@@ -55,7 +56,7 @@ def tests_impl(session, extras="socks,brotli"):
         "-r",
         "a",
         "--tb=native",
-        "--cov=hip",
+        "--cov=ahip",
         "--no-success-flaky-report",
         *(session.posargs or ("test/",)),
         env={"PYTHONWARNINGS": "always::DeprecationWarning"}
