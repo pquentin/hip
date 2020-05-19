@@ -18,4 +18,7 @@ if [ "$JOB_NAME" = "" ]; then
 fi
 
 curl-harder -o codecov.sh https://codecov.io/bash
-bash codecov.sh -f coverage.xml -n "${JOB_NAME}"
+if [ -f coverage-ahip.xml ]; then
+    bash codecov.sh -f coverage-ahip.xml -n "${JOB_NAME}" -F ahip
+fi
+bash codecov.sh -f coverage-hip.xml -n "${JOB_NAME}" -F hip
