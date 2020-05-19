@@ -43,7 +43,7 @@ if sys.version_info >= (3, 5):
         return fn(timeout)
 
 
-else:  # Python 2.7
+else:
     # Old and broken Pythons.
     def _retry_on_intr(fn, timeout):
         if timeout is None:
