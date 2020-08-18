@@ -34,6 +34,7 @@ def tests_impl(session, extras="socks,brotli"):
         [
             "test/with_dummyserver/async/__init__.py",
             "test/with_dummyserver/async/test_poolmanager.py",
+            "test/with_dummyserver/async/test_socketlevel.py",
         ],
         rules=[
             unasync.Rule(

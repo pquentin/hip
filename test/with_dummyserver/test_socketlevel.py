@@ -58,30 +58,6 @@ from test import (
 pytestmark = pytest.mark.flaky
 
 
-class TestCookies(SocketDummyServerTestCase):
-    def test_multi_setcookie(self):
-        def multicookie_response_handler(listener):
-            sock = listener.accept()[0]
-
-            buf = b""
-            while not buf.endswith(b"\r\n\r\n"):
-                buf += sock.recv(65536)
-
-            sock.send(
-                b"HTTP/1.1 200 OK\r\n"
-                b"Set-Cookie: foo=1\r\n"
-                b"Set-Cookie: bar=1\r\n"
-                b"\r\n"
-            )
-            sock.close()
-
-        self._start_server(multicookie_response_handler)
-        with HTTPConnectionPool(self.host, self.port) as pool:
-            r = pool.request("GET", "/", retries=0)
-            assert r.headers == {"set-cookie": "foo=1, bar=1"}
-            assert r.headers.getlist("set-cookie") == ["foo=1", "bar=1"]
-
-
 class TestSNI(SocketDummyServerTestCase):
     @pytest.mark.skipif(not HAS_SNI, reason="SNI-support not available")
     def test_hostname_in_first_request_packet(self):
